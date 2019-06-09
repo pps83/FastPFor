@@ -103,12 +103,7 @@ template <class T> bool needPaddingTo64bytes(const T *inbyte) {
 
 __attribute__((const)) inline uint32_t gccbits(const uint32_t v) {
 #ifdef _MSC_VER
-  if (v == 0) {
-    return 0;
-  }
-  unsigned long answer;
-  _BitScanReverse(&answer, v);
-  return answer + 1;
+  return 32 - __lzcnt(v);
 #else
   return v == 0 ? 0 : 32 - __builtin_clz(v);
 #endif
@@ -140,12 +135,8 @@ __attribute__((const)) inline uint32_t gccbits(const uint64_t v) {
 }
 
 #ifdef _MSC_VER
-// taken from
-// http://stackoverflow.com/questions/355967/how-to-use-msvc-intrinsics-to-get-the-equivalent-of-this-gcc-code
-inline uint32_t __builtin_clz(uint32_t x) {
-  unsigned long r = 0;
-  _BitScanReverse(&r, x);
-  return (31 - r);
+static inline uint32_t __builtin_clz(uint32_t x) {
+  return __lzcnt(x);
 }
 
 #endif
