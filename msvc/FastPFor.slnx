@@ -1,0 +1,24 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="benchbitpacking.vcxproj" Id="2759c6d3-aefd-488b-b0de-2fbf38c59033">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="codecs.vcxproj" Id="6ea32961-5f77-49c0-ab3b-4cfc8bcf325f" />
+  <Project Path="csv2maropu.vcxproj" Id="0b3b4eee-2be4-45e0-b569-6e8ea6c20640">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="entropy.vcxproj" Id="4651272c-af97-4366-9cc2-d3f2981950e1">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="example.vcxproj" Id="ac339fa7-903e-4641-a942-1d08d872ce94">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="FastPFor.vcxproj" Id="42d8aba4-fc4e-426c-a833-d64d06081f92" />
+  <Project Path="gapstats.vcxproj" Id="e453a390-f839-481e-bad5-8491cb798e1e">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="inmemorybenchmark.vcxproj" Id="635b18e0-2ad7-45a7-914e-831a6b711f89" />
+  <Project Path="unit.vcxproj" Id="8b2ed3af-f2e8-480b-be7d-7b6e44dc4bfe" />
+</Solution>
